@@ -9,3 +9,4 @@ function News({news}){
     )
 }
 export default News;
+
