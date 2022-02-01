@@ -1,4 +1,5 @@
 
+
 function News({news}){
     return (
         <li className='list-item'>
@@ -6,6 +7,7 @@ function News({news}){
             <span><a>author</a><a>creation date</a></span>
         </li>
         
+
     )
 }
 export default News;
