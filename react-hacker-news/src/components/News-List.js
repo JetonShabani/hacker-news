@@ -13,4 +13,4 @@ function NewsList({newsArr}){
         </ul>
     )
 }
-export default NewsList();
+export default NewsList;
