@@ -1,7 +1,7 @@
 
 function News(){
-    return {
+    return (
 
-    }
+    )
 }
 export default News();
