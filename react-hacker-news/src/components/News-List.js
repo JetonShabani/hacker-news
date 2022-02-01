@@ -4,4 +4,4 @@ function NewsList(){
 
     }
 }
-export default NewsList();
+export default NewsList;
