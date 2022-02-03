@@ -1,6 +1,56 @@
-.App {
-  text-align: center;
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+  
 }
+
+#root {
+  background-color: #f6f6ef;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+/*thi is for the author and the time    (news.js)   */
+.subText {
+  font-size: 7pt;
+  color: #828282;
+  
+}
+
+/*thi is for the title (news.js)  */
+.titleName {
+  color: black;
+  font-size: 11pt;
+  text-decoration: none !important;
+
+}
+
+
+/*thi is for the title link near the title (news.js)*/
+
+.titleLink {
+  color: #828282;
+  text-decoration: none !important;
+  
+}
+
+
+/*thi is for the title link near the title (news.js)*/
+
+.titleLink:hover {
+  color: #828282;
+  cursor:pointer; 
+}
+
 
 .App-logo {
   height: 40vmin;

@@ -24,10 +24,10 @@ function App() {
   console.log(hits);
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <Searchbar/>
+      
+      
       <NewsList newsArr={hits}/>
-
+      <Searchbar/>
     </div>
   );
 }
