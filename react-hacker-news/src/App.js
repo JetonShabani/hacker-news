@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
-      {/* <Searchbar/> */}
+      <Searchbar/>
       <NewsList newsArr={hits}/>
 
     </div>
