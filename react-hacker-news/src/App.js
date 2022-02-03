@@ -24,6 +24,7 @@ function App() {
     getData();
     
   },[]);
+
   
   console.log(hits);
   return (
@@ -31,6 +32,7 @@ function App() {
       <h1>Hello</h1>
       {/* <Searchbar/> */}
       <NewsList newsArr={hits}/>
+
     </div>
   );
 }

@@ -1,16 +1,7 @@
-import News from "./News";
 
-function NewsList({newsArr}){
-    return (
-        <ul>
-            {newsArr.map(news => (
-                <News 
-                   // key={news.id} 
-                    news={news} 
-                    
-                    />
-            ))}
-        </ul>
-    )
+function NewsList(){
+    return{
+
+    }
 }
-export default NewsList;
+export default NewsList();
