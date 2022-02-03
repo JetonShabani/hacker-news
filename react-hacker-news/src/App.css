@@ -12,6 +12,40 @@ body {
   background-color: #f6f6ef;
 }
 
+.navigation {
+  background-color: rgb(255, 102, 0);
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  
+  
+}
+.ulList {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  
+  list-style:none;
+}
+
+.title {
+  font-weight: bold;
+  text-decoration: none;
+  color: #282c34;
+  margin: 0%;
+  padding-right: 5pt;
+  line-height: 12pt;
+    height: 10px;
+}
+
+.image {
+  width: 18px;
+  height: 18px;
+  border: 1px white solid;
+  padding-right: 4px;
+  margin: 5px;
+}
+
 .list {
   display: flex;
   justify-content: flex-start;
@@ -40,6 +74,7 @@ body {
 .titleLink {
   color: #828282;
   text-decoration: none !important;
+  font-size: 8pt;
   
 }
 
@@ -49,6 +84,11 @@ body {
 .titleLink:hover {
   color: #828282;
   cursor:pointer; 
+  font-size: 8pt;
+}
+
+.number {
+  color: #828282;
 }
 
 

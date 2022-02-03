@@ -1,7 +1,7 @@
 import News from "./News";
 function NewsList({newsArr}){
     return (
-        <ol>
+        <ol className="number">
             {newsArr.map(news => (
                 <News 
                     key={news.objectID} 

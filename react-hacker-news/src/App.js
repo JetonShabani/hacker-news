@@ -3,6 +3,8 @@ import Searchbar from "./components/Searchbar"
 import axios from 'axios';
 import NewsList from "./components/News-List";
 import {useEffect, useState} from "react";
+import Navigation from './components/Navigation';
+
 function App() {
   const [hits, setHits] = useState([]);
   
@@ -25,7 +27,7 @@ function App() {
   return (
     <div className="App">
       
-      
+      <Navigation />
       <NewsList newsArr={hits}/>
       <Searchbar/>
     </div>
