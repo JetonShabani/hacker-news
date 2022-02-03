@@ -2,8 +2,8 @@
 function News({news}){
     return (
         <li className='list-item'>
-            <span><a>title</a><a>url</a></span><br/>
-            <span><a>author</a><a>creation date</a></span>
+            <span><a>{news.title}</a><a>{news.url}</a></span><br/>
+            <span><a>{news.author}</a><a>{news.created_at}</a></span>
         </li>
 
     )
