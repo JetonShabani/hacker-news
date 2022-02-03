@@ -126,3 +126,24 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Footer and NAV */
+.footer-nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  font-size: small;
+}
+  .applications{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.searchbar{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
