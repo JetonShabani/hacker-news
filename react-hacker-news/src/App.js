@@ -2,8 +2,9 @@ import './App.css';
 import Searchbar from "./components/Searchbar"
 import axios from 'axios';
 import NewsList from "./components/News-List";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import Navigation from './components/Navigation';
+//import ReactPagination from "react-pagination";
 
 function App() {
   const [hits, setHits] = useState([]);
@@ -67,4 +68,4 @@ function App() {
   );
 }
 
-export default App;
+ export default App;

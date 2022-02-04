@@ -6,31 +6,31 @@ function Navigation(){
     return (
         <div className="navigation">
             <div className="logo">
-                <img className="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Y_Combinator_logo.svg/384px-Y_Combinator_logo.svg.png"></img>
+                <img className="image" alt="hacker-news-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Y_Combinator_logo.svg/384px-Y_Combinator_logo.svg.png"></img>
                 
             </div>
-            <div><a  className="title" href="#">Hacker News </a></div> 
+            <div><a  className="title" href=" ">Hacker News </a></div> 
             <ul className="ulList">
                 <li>
-                    new |
+                   <a href=" "> new |</a>
                 </li>
                 <li>
-                    past |
+                <a href=""> past |</a>
                 </li>
                 <li>
-                    comments |
+                <a href=" "> comment |</a>
                 </li>
                 <li>
-                    ask |
+                <a href=" "> ask |</a>
                 </li>
                 <li>
-                    show |
+                <a href=" "> show |</a>
                 </li>
                 <li>
-                    jobs |
+                <a href=" "> job |</a>
                 </li>
                 <li>
-                    submit |
+                <a href=" "> submit |</a>
                 </li>
             </ul>
         </div>
