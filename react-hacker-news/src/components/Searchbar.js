@@ -8,20 +8,10 @@ function Searchbar(props){
          console.log(textInput)
       }
       function onClick(e){
-          
-        // let url = "http://hn.algolia.com/api/v1/search?query="+input;
         props.setInput(textInput)
-        props.getData();
+        props.getData(textInput);
         e.preventDefault();
-                // console.log(url);
-        // console.log(url)
-        // axios.get(url)
-        //   .then(res => {
-        //     //const hits = res.data;
-        //     props.handelChange(res.data.hits);
-            
-        //   })
-        //   console.log(" Get got called");
+       
           
       }
       

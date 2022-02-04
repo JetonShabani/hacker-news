@@ -8,49 +8,49 @@ import Navigation from './components/Navigation';
 function App() {
   const [hits, setHits] = useState([]);
   const [input, setInput] = useState("");
-  // const [update, setUpdate]= useState(true)
+  const [isLoading, setIsLoading] = useState(false);
+  // const[firstLoad, setFirstLoad] = useState(0);
   console.log(input)
   
   function loadData(){
     let url = "http://hn.algolia.com/api/v1/search?query=React";
-    // console.log(url)
+    setIsLoading(true);
     axios.get(url)
       .then(res => {
-        // const arr = ;
         setHits(res.data.hits);
-        // console.log(hits);
-        // console.log(arr.hits);
+;
       })
-      // setUpdate(false);
+     ;
+     setIsLoading(false);
+    //  setFirstLoad(1)
   }
-  function getData(){
-    let url = "http://hn.algolia.com/api/v1/search?query="+input;
-    // console.log(url)
+  function getData(txt=""){
+    if(txt.trim() === ""){
+      alert("Please enter a Searchtopic")
+    } else{
+      setIsLoading(true);
+    let url = "http://hn.algolia.com/api/v1/search?query="+txt;
     axios.get(url)
       .then(res => {
          const arr = res.data;
         setHits(arr.hits);
-        // console.log(hits);
-        // console.log(arr.hits);
-      })
-      // setUpdate(true);
+      })}
+      setIsLoading(false);
   }
   useEffect(()=>{
     loadData()
     console.log("loadGotCalled")
   },[]);
-  useEffect(()=>{
-    getData();
-    // setUpdate(false);
-   console.log("getGotCalled") 
-  },[input])
   return (
     <div className="App">
-      {/* <button onClick={()=>{
-        setInput("HTML")}}>TEST</button> */}
-      <Navigation />
-      <NewsList newsArr={hits}/>
-      <Searchbar input={input} getData={getData} setInput={setInput} />
+      {isLoading ? (
+         <p>Loading ...</p>):(  
+          <div>
+            <Navigation />
+            <NewsList newsArr={hits}/>
+            <Searchbar input={input} getData={getData} setInput={setInput} />
+         </div>)}
+    
     </div>
   );
 }
