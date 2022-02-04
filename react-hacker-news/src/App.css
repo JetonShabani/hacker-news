@@ -1,6 +1,96 @@
-.App {
-  text-align: center;
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+  
 }
+
+#root {
+  background-color: #f6f6ef;
+}
+
+.navigation {
+  background-color: rgb(255, 102, 0);
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  
+  
+}
+.ulList {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  
+  list-style:none;
+}
+
+.title {
+  font-weight: bold;
+  text-decoration: none;
+  color: #282c34;
+  margin: 0%;
+  padding-right: 5pt;
+  line-height: 12pt;
+    height: 10px;
+}
+
+.image {
+  width: 18px;
+  height: 18px;
+  border: 1px white solid;
+  padding-right: 4px;
+  margin: 5px;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+/*thi is for the author and the time    (news.js)   */
+.subText {
+  font-size: 7pt;
+  color: #828282;
+  
+}
+
+/*thi is for the title (news.js)  */
+.titleName {
+  color: black;
+  font-size: 11pt;
+  text-decoration: none !important;
+
+}
+
+
+/*thi is for the title link near the title (news.js)*/
+
+.titleLink {
+  color: #828282;
+  text-decoration: none !important;
+  font-size: 8pt;
+  
+}
+
+
+/*thi is for the title link near the title (news.js)*/
+
+.titleLink:hover {
+  color: #828282;
+  cursor:pointer; 
+  font-size: 8pt;
+}
+
+.number {
+  color: #828282;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +125,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Footer and NAV */
+.footer-nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  font-size: small;
+}
+  .applications{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.searchbar{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
