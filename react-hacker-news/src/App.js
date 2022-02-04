@@ -12,44 +12,56 @@ function App() {
   // const[firstLoad, setFirstLoad] = useState(0);
   console.log(input)
   
-  function loadData(){
+  async function loadData(){
     let url = "http://hn.algolia.com/api/v1/search?query=React";
     setIsLoading(true);
+    // console.log(isLoading)
     axios.get(url)
       .then(res => {
+       
         setHits(res.data.hits);
-;
-      })
-     ;
-     setIsLoading(false);
+        setIsLoading(false);
+      });
+      
+      console.log(isLoading)
     //  setFirstLoad(1)
   }
-  function getData(txt=""){
+  async function getData(txt=""){
+   setIsLoading(true);
     if(txt.trim() === ""){
       alert("Please enter a Searchtopic")
+      // document.getElementById("msg").innerText="No Results Found"
+
     } else{
-      setIsLoading(true);
     let url = "http://hn.algolia.com/api/v1/search?query="+txt;
     axios.get(url)
       .then(res => {
          const arr = res.data;
         setHits(arr.hits);
-      })}
-      setIsLoading(false);
+        setIsLoading(false);
+       
+      })
+      
+    }
+      
   }
   useEffect(()=>{
+    // setIsLoading(true);
+    // console.log(isLoading)
     loadData()
     console.log("loadGotCalled")
+    // console.log(isLoading)
+    // setIsLoading(false);
   },[]);
+ 
   return (
     <div className="App">
-      {isLoading ? (
-         <p>Loading ...</p>):(  
+   
           <div>
             <Navigation />
-            <NewsList newsArr={hits}/>
+            {isLoading ? (<p id = "msg">Loading ...</p>):(<NewsList newsArr={hits}/>)}
             <Searchbar input={input} getData={getData} setInput={setInput} />
-         </div>)}
+         </div>
     
     </div>
   );

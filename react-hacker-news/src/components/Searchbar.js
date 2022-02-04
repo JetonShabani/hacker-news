@@ -2,10 +2,10 @@ import { useState} from 'react'
 
 function Searchbar(props){
     const [textInput, setTextInput] = useState(props.input);
-    console.log(textInput)
+    // console.log(textInput)
     function onInputChange(e) {
          setTextInput(e.target.value)
-         console.log(textInput)
+        //  console.log(textInput)
       }
       function onClick(e){
         props.setInput(textInput)
