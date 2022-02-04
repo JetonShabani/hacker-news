@@ -19,7 +19,6 @@ function App() {
     // console.log(isLoading)
     axios.get(url)
       .then(res => {
-       
         setHits(res.data.hits);
         setIsLoading(false);
       });
