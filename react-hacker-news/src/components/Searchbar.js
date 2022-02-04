@@ -2,26 +2,16 @@ import { useState} from 'react'
 
 function Searchbar(props){
     const [textInput, setTextInput] = useState(props.input);
-    console.log(textInput)
+    // console.log(textInput)
     function onInputChange(e) {
          setTextInput(e.target.value)
-         console.log(textInput)
+        //  console.log(textInput)
       }
       function onClick(e){
-          
-        // let url = "http://hn.algolia.com/api/v1/search?query="+input;
         props.setInput(textInput)
-        props.getData();
+        props.getData(textInput);
         e.preventDefault();
-                // console.log(url);
-        // console.log(url)
-        // axios.get(url)
-        //   .then(res => {
-        //     //const hits = res.data;
-        //     props.handelChange(res.data.hits);
-            
-        //   })
-        //   console.log(" Get got called");
+       
           
       }
       
