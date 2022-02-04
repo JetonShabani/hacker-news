@@ -1,29 +1,33 @@
 import { useState} from 'react'
 
 function Searchbar(props){
-    const [input, setInput] = useState(" ");
-
+    const [textInput, setTextInput] = useState(props.input);
+    console.log(textInput)
     function onInputChange(e) {
-         setInput(e.target.value)
-         console.log(input)
+         setTextInput(e.target.value)
+         console.log(textInput)
       }
-    //   function onClick(){
-    //     let url = "http://hn.algolia.com/api/v1/search?query="+document.getElementById("header-search").value;
-    //     console.log(url);
-    //     console.log(url)
-    //     axios.get(url)
-    //       .then(res => {
-    //         //const hits = res.data;
-    //         props.handelChange(res.data.hits);
-            
-    //       })
-    //       console.log(" Get got called");
+      function onClick(e){
           
-    //   }
+        // let url = "http://hn.algolia.com/api/v1/search?query="+input;
+        props.setInput(textInput)
+        props.getData();
+        e.preventDefault();
+                // console.log(url);
+        // console.log(url)
+        // axios.get(url)
+        //   .then(res => {
+        //     //const hits = res.data;
+        //     props.handelChange(res.data.hits);
+            
+        //   })
+        //   console.log(" Get got called");
+          
+      }
       
     return(
-        <><p class="applications">Applications are open for YC Summer 2022</p>
-        <nav class="footer-nav">
+        <><p className="applications">Applications are open for YC Summer 2022</p>
+        <nav className="footer-nav">
             <p>Guidelines</p>
             <p>FAQ</p>
             <p>Lists</p>
@@ -33,16 +37,18 @@ function Searchbar(props){
             <p>Apply to YC</p>
             <p>Contact</p>
         </nav>
-        <form class="searchbar" action="/" method="get">
+        <form className="searchbar">
             <label htmlFor="header-search">
                 <span>Search:</span>
             </label>
             <input
                 type="text"
                 id="header-search"
-                placeholder="Search blog posts" />
+                placeholder="Search blog posts" 
+                onChange={onInputChange}
+                />
 
-            <button type="submit">Search</button>
+            <button type="submit" onClick={onClick}>Search</button>
         </form></>
     )   
 }
