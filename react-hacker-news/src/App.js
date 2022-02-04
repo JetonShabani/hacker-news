@@ -22,7 +22,7 @@ function App() {
         setHits(res.data.hits);
         setIsLoading(false);
       });
-
+    
   }
   async function getData(txt=""){
    setIsLoading(true);
@@ -31,7 +31,7 @@ function App() {
       setEmptySearch(true);
     } else{
       setEmptySearch(false);
-    let url = "http://hn.algolia.com/api/v1/search?query=%22"+txt;
+    let url = "http://hn.algolia.com/api/v1/search?query="+txt;
     axios.get(url)
       .then(res => {
          const arr = res.data;
